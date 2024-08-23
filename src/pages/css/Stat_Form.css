@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.sf-title {
+  font-family: "Ysabeau SC";
+  color: rgb(20, 20, 20);
+  text-decoration-line: underline;
+  background-color: white;
+  width: 300px;
+  font-size: 50px;
+  height: 75px;
+  outline: none;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 0.25em;
+}
+
+.sf-overall {
+  min-width: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: first baseline;
+}
+
+.sf-bg {
+  background-color: rgb(56, 53, 53);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+input {
+  border: 3px solid #000405;
+}
+
+input:invalid {
+  color: gray;
+}
+
+input:focus {
+  outline: 5px solid rgb(184, 209, 252);
+}
+
+.sf-input-box {
+  width: 300px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: hsl(202, 85%, 3%);
+}
+
+select {
+  color: black;
+  border: 3px solid #000405;
+  width: 300px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 0.25em;
+}
+
+select:focus {
+  outline: 5px solid rgb(184, 209, 252);
+}
+
+select:invalid {
+  color: gray;
+}
+
+select :nth-child(1) {
+  color: gray;
+}
+
+select :nth-child(2),
+select :nth-child(3),
+select :nth-child(4) {
+  color: black;
+}
+
+::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+button {
+  width: 200px;
+  font-size: 30px;
+  height: 50px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  margin-left: 75px;
+  margin-right: 75px;
+  border-radius: 0.25em;
+  color: hsl(0, 11%, 98%);
+}
+
+.sf-sub {
+  background: rgb(42, 192, 65);
+  border: 1px solid rgb(42, 192, 65);
+}
+
+.sf-reset {
+  background: rgb(206, 52, 52);
+  border: 1px solid rgb(206, 52, 52);
+}
+
+.sf-sub:hover,
+.sf-sub:focus-visible {
+  color: rgb(42, 192, 65);
+  background: hsl(210, 8%, 95%);
+}
+
+.sf-reset:hover,
+.sf-reset:focus-visible {
+  color: rgb(206, 52, 52);
+  background: hsl(210, 8%, 95%);
+}
+
+li {
+  color: black;
+}
+
+@media (orientation: portrait) or (max-width: 1100px) {
+  .sf-title {
+    width: 120px;
+    font-size: 30px;
+    height: 50px;
+  }
+  .sf-bg {
+    width: 100vw;
+  }
+
+  button {
+    font-size: 16px;
+    width: 80px;
+    height: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .sf-input-box {
+    font-size: 18px;
+    font-weight: bold;
+    width: 40%;
+    padding: 10px;
+  }
+  select {
+    font-size: 16px;
+    font-weight: bold;
+    width: 60%;
+  }
+  .overall {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .col {
+    padding: 0.25rem;
+  }
+}

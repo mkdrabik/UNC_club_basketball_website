@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&display=swap");
+
+.header {
+  background-color: rgb(16, 16, 17);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+  width: 120px;
+}
+
+.cname {
+  font-family: "Ysabeau SC";
+  color: rgb(184, 209, 252);
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  background-color: rgb(16, 16, 17);
+  background-size: cover;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.navbar a {
+  font-family: "Ysabeau SC";
+  color: rgb(184, 209, 252);
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+
+.navbar a:hover {
+  color: rgb(254, 252, 252);
+}
+
+.navbar li {
+  float: right;
+}
+
+@media (orientation: portrait) or (max-width: 1100px) {
+  .cname {
+    font-size: 40px;
+    padding: 0px;
+  }
+  .header {
+    flex-direction: column;
+    padding: 2px;
+  }
+
+  .navbar a {
+    font-size: 20px;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+}
