@@ -10,16 +10,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 function Header() {
   return (
     <div class="header">
-      <h1>
-        <Link to="/about" className="cname">
-          <img
-            src={require("./unc.png")}
-            alt="Logo"
-            draggable="false"
-            className="logo"
-          />
-        </Link>
-      </h1>
       <nav class="navbar">
         <ul>
           <li>
@@ -31,6 +21,16 @@ function Header() {
             <span>
               <Link to="/stat_form">Log Stats</Link>
             </span>
+          </li>
+          <li>
+            <Link to="/about" className="cname">
+              <img
+                src={require("./unc.png")}
+                alt="Logo"
+                draggable="false"
+                className="logo"
+              />
+            </Link>
           </li>
           <li>
             <span>

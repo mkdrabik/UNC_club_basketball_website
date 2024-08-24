@@ -11,37 +11,25 @@
 }
 
 .logo {
-  height: 100px;
-  width: 120px;
-}
-
-.cname {
-  font-family: "Ysabeau SC";
-  color: rgb(184, 209, 252);
-  text-decoration: none;
-  font-size: 40px;
-  font-weight: bold;
-  padding: 20px;
-  text-align: center;
+  height: 70px;
+  width: 84px;
+  animation: none;
 }
 
 .navbar ul {
   list-style-type: none;
   background-color: rgb(16, 16, 17);
   background-size: cover;
-  padding: 0px;
-  margin: 0px;
   overflow: hidden;
 }
 
 .navbar a {
   font-family: "Ysabeau SC";
-  color: rgb(184, 209, 252);
+  color: rgb(110, 197, 255);
   text-decoration: none;
   font-size: 40px;
   font-weight: bold;
   padding: 20px;
-  text-align: center;
 }
 
 .navbar a:hover {

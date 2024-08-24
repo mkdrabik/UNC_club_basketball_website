@@ -1,7 +1,6 @@
 import Header from "../../components/Header";
 
 import "../css/About.css";
-import "../imgs/c1.jpeg";
 
 function About() {
   return (
