@@ -6,18 +6,24 @@ import Header from "../../components/Header";
 
 import "../css/Stat_Form.css";
 
+// TODO: Get roster and add option for every player
 function StatForm() {
   const [game, setGame] = useState({
     date: "",
     opponent: "",
     win: "",
     game: "",
-    players: {},
   });
+
+  const [players, setPlayers] = useState({});
+  const [player, setPlayer] = useState("");
+  const [points, setPoints] = useState("");
   const d = useRef("");
   const o = useRef("");
   const w = useRef("");
   const ga = useRef("");
+  const p = useRef("");
+  const pts = useRef("");
   var emp = true;
 
   //Resets form whenever page is refreshed
@@ -67,13 +73,14 @@ function StatForm() {
           <div className="row">
             <button
               className="sf-sub"
-              onClick={() => {
-                if (!auth.currentUser) {
-                  alert("Sign in to log stats");
-                } else {
-                  filled();
-                }
-              }}
+              onClick={printPlayers}
+              //() => {
+              //   if (!auth.currentUser) {
+              //     alert("Sign in to log stats");
+              //   } else {
+              //     filled();
+              //   }
+              // }}
             >
               Submit
             </button>
@@ -130,19 +137,28 @@ function StatForm() {
           <br />
           <div className="row">
             <input
-              placeholder="Player 1"
+              placeholder="Player"
               type="input"
               className="sf-input-box"
-              //onChange={handleGameChange}
+              ref={p}
+              onChange={handlePlayerChange}
             />
-
             <input
-              placeholder="Player 1 Points"
+              placeholder="Points"
               type="number"
               className="sf-input-box"
-              //onChange={handleGameChange}
+              ref={pts}
+              onChange={handlePointChange}
             />
+            <button className="sf-reset" onClick={addPlayerPts}>
+              Add Player
+            </button>
           </div>
+          {Object.entries(players).map(([key, value]) => (
+            <p key={key}>
+              <strong>{key}:</strong> {value}
+            </p>
+          ))}
           <br />
           <br />
           <br />
@@ -180,6 +196,30 @@ function StatForm() {
     setGame((g) => ({ ...game, game: e.target.value }));
   }
 
+  function handlePlayerChange(e) {
+    setPlayer(e.target.value);
+  }
+
+  function handlePointChange(e) {
+    if (e.target.value >= 0) {
+      setPoints(e.target.value);
+    } else {
+      e.target.value = 0;
+    }
+  }
+
+  function addPlayerPts(e) {
+    setPlayers((p) => ({ ...players, [player]: points }));
+    p.current.value = "";
+    pts.current.value = "";
+  }
+
+  function printPlayers() {
+    for (let key in players) {
+      console.log(`${key}: ${players[key]}`);
+    }
+  }
+
   //Checks to see if all fields are filled then calls handle upload
   function filled() {
     emp = false;
@@ -205,11 +245,15 @@ function StatForm() {
     d.current.value = "";
     w.current.value = "";
     o.current.value = "";
+    p.current.value = "";
+    pts.current.value = "";
 
     setGame({
       win: "",
       opponent: "",
     });
+
+    setPlayers({});
   }
 }
 
