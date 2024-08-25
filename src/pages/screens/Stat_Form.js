@@ -9,47 +9,50 @@ import "../css/Stat_Form.css";
 // TODO: Get roster and add option for every player
 function StatForm() {
   const [game, setGame] = useState({
-    date: "",
-    opponent: "",
-    win: "",
-    game: "",
+    Date: "",
+    Opponent: "",
+    Win: "",
+    Game: "",
+    Opponent_score: "",
+    Our_score: "",
   });
 
   const [players, setPlayers] = useState({});
-  const [player, setPlayer] = useState("");
-  const [points, setPoints] = useState("");
+  const [player, setPlayer] = useState(0);
+  const [points, setPoints] = useState(0);
   const d = useRef("");
   const o = useRef("");
   const w = useRef("");
-  const ga = useRef("");
+  const ga = useRef(0);
   const p = useRef("");
-  const pts = useRef("");
+  const pts = useRef(0);
+  const os = useRef(0);
+  const us = useRef(0);
   var emp = true;
 
   //Resets form whenever page is refreshed
   useEffect(() => {
-    setGame({
-      win: "",
-      opponent: "",
-      date: "",
-      game: "",
-      players: {},
-    });
     clear();
   }, []);
 
   //Handle Data Upload
   const handleUpload = async () => {
     try {
-      game.date.toString();
+      const dataToSet = {};
+
+      Object.keys(players).forEach((key) => {
+        dataToSet[key] = Number(players[key]);
+      });
+
+      const comb = { ...game, ...dataToSet };
+      game.Date.toString();
       await setDoc(
-        doc(txtDB, "24-25", game.date.toString() + " " + game.opponent),
-        {
-          Opponent: game.opponent,
-          Win: game.win,
-          Date: game.date,
-          Game: game.game,
-        }
+        doc(
+          txtDB,
+          "24-25",
+          game.Date.toString() + " " + game.Opponent + " " + game.Game
+        ),
+        comb
       );
       alert("Data added successfully.");
     } catch (err) {
@@ -60,6 +63,7 @@ function StatForm() {
         alert("Contact drabikmason12@gmail.com to log stats");
       } else {
         alert("Idk what happened");
+        console.log(err);
       }
       emp = true;
     }
@@ -73,14 +77,13 @@ function StatForm() {
           <div className="row">
             <button
               className="sf-sub"
-              onClick={printPlayers}
-              //() => {
-              //   if (!auth.currentUser) {
-              //     alert("Sign in to log stats");
-              //   } else {
-              //     filled();
-              //   }
-              // }}
+              onClick={() => {
+                if (!auth.currentUser) {
+                  alert("Sign in to log stats");
+                } else {
+                  filled();
+                }
+              }}
             >
               Submit
             </button>
@@ -105,7 +108,24 @@ function StatForm() {
           </select>
           <br />
           <br />
-
+          <div className="row">
+            <input
+              placeholder="Our Score"
+              ref={us}
+              type="number"
+              className="sf-input-box"
+              onChange={handleUSChange}
+            />
+            <input
+              placeholder="Opponent Score"
+              ref={os}
+              type="number"
+              className="sf-input-box"
+              onChange={handleOSChange}
+            />
+          </div>
+          <br />
+          <br />
           <input
             placeholder="Opponent?"
             ref={o}
@@ -150,14 +170,27 @@ function StatForm() {
               ref={pts}
               onChange={handlePointChange}
             />
-            <button className="sf-reset" onClick={addPlayerPts}>
+            <button className="sf-sub" onClick={addPlayerPts}>
               Add Player
             </button>
           </div>
           {Object.entries(players).map(([key, value]) => (
-            <p key={key}>
-              <strong>{key}:</strong> {value}
-            </p>
+            <div className="row" key={key}>
+              <h1>
+                {key}: {value}pts
+              </h1>
+              <button
+                className="sf-reset"
+                onClick={() => {
+                  {
+                    delete players[key];
+                    setPlayers((p) => ({ ...players }));
+                  }
+                }}
+              >
+                Delete
+              </button>
+            </div>
           ))}
           <br />
           <br />
@@ -182,18 +215,38 @@ function StatForm() {
   function handleWinChange() {
     var e = document.getElementById("outcome");
     var value = e.options[e.selectedIndex].value;
-    setGame((g) => ({ ...game, win: value }));
+    setGame((g) => ({ ...game, Win: value }));
   }
 
   function handleDateChange(e) {
-    setGame((g) => ({ ...game, date: e.target.value }));
+    setGame((g) => ({ ...game, Date: e.target.value }));
   }
   function handleOpponentChange(e) {
-    setGame((g) => ({ ...game, opponent: e.target.value }));
+    setGame((g) => ({ ...game, Opponent: e.target.value }));
   }
 
   function handleGameChange(e) {
-    setGame((g) => ({ ...game, game: e.target.value }));
+    if (e.target.value >= 0) {
+      setGame((g) => ({ ...game, Game: Number(e.target.value) }));
+    } else {
+      e.target.value = 0;
+    }
+  }
+
+  function handleOSChange(e) {
+    if (e.target.value >= 0) {
+      setGame((g) => ({ ...game, Opponent_score: Number(e.target.value) }));
+    } else {
+      e.target.value = 0;
+    }
+  }
+
+  function handleUSChange(e) {
+    if (e.target.value >= 0) {
+      setGame((g) => ({ ...game, Our_score: Number(e.target.value) }));
+    } else {
+      e.target.value = 0;
+    }
   }
 
   function handlePlayerChange(e) {
@@ -247,10 +300,17 @@ function StatForm() {
     o.current.value = "";
     p.current.value = "";
     pts.current.value = "";
+    ga.current.value = "";
+    os.current.value = "";
+    us.current.value = "";
 
     setGame({
-      win: "",
-      opponent: "",
+      Win: "",
+      Opponent: "",
+      Date: "",
+      Game: 0,
+      Opponent_score: 0,
+      Our_score: 0,
     });
 
     setPlayers({});
