@@ -5,9 +5,15 @@
   background-color: rgb(16, 16, 17);
   background-size: cover;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .logo {
@@ -48,6 +54,7 @@
   .header {
     flex-direction: column;
     padding: 2px;
+    align-items: center;
   }
 
   .navbar a {

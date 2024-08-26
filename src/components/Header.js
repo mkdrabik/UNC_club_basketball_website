@@ -22,16 +22,7 @@ function Header() {
               <Link to="/stat_form">Log Stats</Link>
             </span>
           </li>
-          <li>
-            <Link to="/about" className="cname">
-              <img
-                src={require("./unc.png")}
-                alt="Logo"
-                draggable="false"
-                className="logo"
-              />
-            </Link>
-          </li>
+
           <li>
             <span>
               <Link to="/stats">View Stats</Link>
@@ -43,6 +34,16 @@ function Header() {
             </span>
           </li>
         </ul>
+        <li>
+          <Link to="/about">
+            <img
+              src={require("./unc.png")}
+              alt="Logo"
+              draggable="false"
+              className="logo"
+            />
+          </Link>
+        </li>
       </nav>
     </div>
   );
