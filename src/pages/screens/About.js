@@ -12,7 +12,7 @@ function About() {
       <div className="ab-horizontal">
         <div className="ab-vertical">
           <div className="ab-horizontal">
-            <h1 className="ab-t">President:</h1>
+            <h1 className="ab-t">Presdent:</h1>
             <h1 className="ab-des"> Tucker Shank</h1>
           </div>
 
