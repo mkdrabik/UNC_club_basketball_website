@@ -55,7 +55,7 @@ input:invalid {
 }
 
 input:focus {
-  outline: 5px solid rgb(184, 209, 252);
+  outline: 5px solid rgb(118, 197, 250);
 }
 
 .sf-input-box {
@@ -77,7 +77,11 @@ select {
 }
 
 select:focus {
-  outline: 5px solid rgb(184, 209, 252);
+  outline: 5px solid rgb(118, 197, 250);
+}
+
+.sf-input-box:focus {
+  outline: 5px solid rgb(118, 197, 250);
 }
 
 select:invalid {
@@ -137,6 +141,11 @@ button {
 
 li {
   color: black;
+}
+
+.player-text {
+  color: white;
+  font-weight: bold;
 }
 
 @media (orientation: portrait) or (max-width: 1100px) {

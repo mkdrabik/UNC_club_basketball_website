@@ -74,14 +74,18 @@
 .ab {
   font-family: "Courier New", Courier, monospace;
   font-size: 40px;
-  color: rgb(96, 154, 255);
+  color: rgb(118, 197, 250);
   pointer-events: none;
   font-weight: bold;
   text-align: center;
 }
 
 .horizontal-img {
-  width: 400px;
+  width: 600px;
+}
+
+.vertical-img {
+  width: 350px;
 }
 
 img {

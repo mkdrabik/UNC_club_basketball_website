@@ -176,7 +176,7 @@ function StatForm() {
           </div>
           {Object.entries(players).map(([key, value]) => (
             <div className="row" key={key}>
-              <h1>
+              <h1 className="player-text">
                 {key}: {value}pts
               </h1>
               <button

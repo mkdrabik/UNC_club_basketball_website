@@ -12,8 +12,15 @@ function Media() {
           src={require("../imgs/tourney.png")}
           alt="Logo"
           draggable="false"
+          className="vertical-img"
         />
-        <img src={require("../imgs/duke.png")} alt="Logo" draggable="false" />
+        <img
+          src={require("../imgs/duke.png")}
+          alt="Logo"
+          className="vertical-img"
+          draggable="false"
+        />
+
         <img
           src={require("../imgs/uncc.png")}
           className="horizontal-img"
