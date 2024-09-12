@@ -182,10 +182,8 @@ function StatForm() {
               <button
                 className="sf-reset"
                 onClick={() => {
-                  {
-                    delete players[key];
-                    setPlayers((p) => ({ ...players }));
-                  }
+                  delete players[key];
+                  setPlayers((p) => ({ ...players }));
                 }}
               >
                 Delete
@@ -267,11 +265,11 @@ function StatForm() {
     pts.current.value = "";
   }
 
-  function printPlayers() {
-    for (let key in players) {
-      console.log(`${key}: ${players[key]}`);
-    }
-  }
+  // function printPlayers() {
+  //   for (let key in players) {
+  //     console.log(`${key}: ${players[key]}`);
+  //   }
+  // }
 
   //Checks to see if all fields are filled then calls handle upload
   function filled() {
