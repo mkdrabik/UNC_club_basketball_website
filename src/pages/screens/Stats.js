@@ -63,12 +63,14 @@ function Stats() {
 
         //non-opponent query
         q = await query(colRef, where(player, "!=", null));
-
         //gets averages over query
         const ss = await getAggregateFromServer(q, {
           ppg: average(player),
         });
-
+        if (ss.ppg === undefined) {
+          alert("No games played");
+          return;
+        }
         const data = await getDocs(q);
         data.forEach((g) => {
           const game = {
