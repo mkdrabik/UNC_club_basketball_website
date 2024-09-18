@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+.ab-horizontal2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .ab-vertical {
   display: flex;
   flex-direction: column;
@@ -95,14 +101,32 @@
   }
   .ab-t,
   .ab-des {
-    font-size: 28px;
+    font-size: 20px;
+    padding-left: 5px;
   }
   .ab-hori {
     gap: 5px;
   }
 
   .logo2 {
-    height: 50px;
-    width: 50px;
+    height: 75px;
+    width: 75px;
+  }
+
+  .ab-horizontal2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ab-vertical2 {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (max-width: 395px) {
+  .ab-t,
+  .ab-des {
+    font-size: 18px;
+    padding-left: 5px;
   }
 }

@@ -9,7 +9,7 @@ function About() {
       <Header />
       <br />
       <br />
-      <div className="ab-horizontal">
+      <div className="ab-horizontal2">
         <div className="ab-vertical">
           <div className="ab-horizontal">
             <h1 className="ab-t">President:</h1>
