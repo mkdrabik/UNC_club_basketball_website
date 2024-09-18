@@ -100,4 +100,9 @@
   .ab-hori {
     gap: 5px;
   }
+
+  .logo2 {
+    height: 50px;
+    width: 50px;
+  }
 }

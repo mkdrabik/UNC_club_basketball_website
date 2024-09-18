@@ -62,4 +62,9 @@
     justify-content: space-evenly;
     padding: 10px;
   }
+
+  .logo {
+    height: 20px;
+    width: 24px;
+  }
 }
