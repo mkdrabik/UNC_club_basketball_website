@@ -59,4 +59,19 @@
   ul {
     padding: 0px;
   }
+
+  @media (max-width: 395px) {
+    .navbar a {
+      font-size: 12px;
+      padding-left: 2px;
+    }
+
+    .logo {
+      height: 30px;
+      width: 36px;
+    }
+    ul {
+      padding: 0px;
+    }
+  }
 }
