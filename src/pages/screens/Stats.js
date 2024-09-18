@@ -121,9 +121,43 @@ function Stats() {
             ref={pla}
           >
             <option value="">Player</option>
-            <option value="Mason">Mason</option>
-            <option value="Jedd">Jedd</option>
-            <option value="Tucker">Tucker</option>
+            <option value="Aidan">Aidan Driscoll </option>
+            <option value="AJ">AJ Webb</option>
+            <option value="Alex">Alexander Sidhu</option>
+            <option value="Arun">Arun Soma</option>
+            <option value="Ben">Ben Cohen-Vogel</option>
+            <option value="Brian">Brian McGarth</option>
+            <option value="Bryson">Bryson Tupper</option>
+            <option value="Charles">Charles Maret</option>
+            <option value="Davis">Davis Long</option>
+            <option value="Denzel">Denzel Foster</option>
+            <option value="Hugh">Hugh Wheeler</option>
+            <option value="Jack">Jack Felkner</option>
+            <option value="James">James Viola</option>
+            <option value="Jedd">Jedd Wagner</option>
+            <option value="Jonah">Jonah Chatowsky</option>
+            <option value="Josh">Josh Crews</option>
+            <option value="Kevin">Kevin Garcia</option>
+            <option value="Khalil">Khalil Blount</option>
+            <option value="Kharan">Kharan Joshi</option>
+            <option value="Kris">Kris Pan</option>
+            <option value="Liam">Liam Gates</option>
+            <option value="Luke">Luke Evers</option>
+            <option value="Mac">Mac Robinson</option>
+            <option value="Mason">Mason Drabik</option>
+            <option value="Matt">Matt Polsky</option>
+            <option value="Nick">Nick Vecchiarello</option>
+            <option value="Nyikos">Nyikos Fritts</option>
+            <option value="Owen">Owen Jackson</option>
+            <option value="Qiis">Qiis Johnson</option>
+            <option value="Riley">Riley Haynie</option>
+            <option value="Sam M">Sam Mirikwe</option>
+            <option value="Sam T">Sam Turner</option>
+            <option value="Sean">Sean Mclean</option>
+            <option value="Seth">Seth Johnson</option>
+            <option value="Spencer">Spencer Burton</option>
+            <option value="Tucker">Tucker Shank</option>
+            <option value="Ty'Rell">Ty'Rell McLucas</option>
           </select>
         </div>
         <div className="row-container">
