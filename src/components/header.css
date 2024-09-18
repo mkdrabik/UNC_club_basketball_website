@@ -47,24 +47,16 @@
 }
 
 @media (orientation: portrait) or (max-width: 1100px) {
-  .cname {
-    font-size: 40px;
-    padding: 0px;
-  }
-  .header {
-    flex-direction: column;
-    padding: 2px;
-    align-items: center;
-  }
-
   .navbar a {
-    font-size: 20px;
-    justify-content: space-evenly;
-    padding: 10px;
+    font-size: 15px;
+    padding-left: 2px;
   }
 
   .logo {
-    height: 20px;
-    width: 24px;
+    height: 30px;
+    width: 36px;
+  }
+  ul {
+    padding: 0px;
   }
 }
