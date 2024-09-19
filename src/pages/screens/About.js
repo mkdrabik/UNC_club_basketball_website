@@ -47,7 +47,7 @@ function About() {
               draggable="false"
             />
           </Link>
-          <Link to="https://www.instagram.com/m_drabik/">
+          <Link to="https://www.instagram.com/carolinaclubhoops/">
             <img
               src={require("../imgs/ig.webp")}
               className="logo2"

@@ -41,13 +41,15 @@ function SignUp() {
       clear();
     } catch (err) {
       console.log(err);
-      if (err.toString().includes("email-already-in-use"))
+      if (err.toString().includes("email-already-in-use")) {
         alert("Email already in use");
-      else if (err.toString().includes("invalid-email")) {
+        return;
+      } else if (err.toString().includes("invalid-email")) {
         alert("Please enter a valid email");
+        return;
       } else {
         alert("User not created");
-        console.log(err);
+        return;
       }
     }
     try {
