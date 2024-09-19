@@ -84,7 +84,7 @@ function SignUp() {
       }
     }
   };
-  //sets lcaol storage persistence
+  //sets local storage persistence
   const enablePersistence = async () => {
     try {
       await setPersistence(auth, browserLocalPersistence);
