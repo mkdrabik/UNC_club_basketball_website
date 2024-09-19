@@ -65,7 +65,7 @@ function Account() {
     try {
       await signOut(auth);
       alert("Successfully signed out");
-      window.location.reload();
+      window.location.assign("https://uncclubbasketball.netlify.app");
     } catch (error) {
       alert("Not logged out!");
     }
