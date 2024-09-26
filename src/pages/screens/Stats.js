@@ -67,10 +67,10 @@ function Stats() {
         const ss = await getAggregateFromServer(q, {
           ppg: average(player),
         });
-        if (ss.ppg === undefined) {
-          alert("No games played");
-          return;
-        }
+        // if (ss.ppg === undefined) {
+        //   alert("No games played");
+        //   return;
+        // }
         const data = await getDocs(q);
         data.forEach((g) => {
           const game = {

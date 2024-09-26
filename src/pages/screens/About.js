@@ -39,7 +39,7 @@ function About() {
           </div>
         </div>
         <div className="ab-vertical2">
-          <Link to="https://account.venmo.com/u/m_drabik">
+          <Link to="https://account.venmo.com/u/Tucker-Shank">
             <img
               src={require("../imgs/venmo.png")}
               className="logo2"
