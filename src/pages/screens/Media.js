@@ -1,3 +1,5 @@
+import { InstagramEmbed } from "react-social-media-embed";
+
 import Header from "../../components/Header";
 
 import "../css/Account.css";
@@ -8,6 +10,13 @@ function Media() {
       <Header />
       <h1 className="ab">Pictures</h1>
       <div className="img-track">
+        <div>
+          <InstagramEmbed
+            url="https://www.instagram.com/p/DAWVptrJ_qR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            width={350}
+            height={480}
+          ></InstagramEmbed>
+        </div>
         <img
           src={require("../imgs/tourney.png")}
           alt="Logo"
