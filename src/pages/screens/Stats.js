@@ -85,11 +85,11 @@ function Stats() {
           setSB(false);
         });
       } else {
-        alert("Provide Gmail to view stats");
+        alert("Provide Email to view stats");
       }
     } catch (err) {
       if (err.toString().includes(" Missing or insufficient permissions")) {
-        alert("Provide Gmail to view stats");
+        alert("Provide Email to view stats");
       } else {
         alert(err);
         console.log(err);
