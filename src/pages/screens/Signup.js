@@ -59,7 +59,7 @@ function SignUp() {
         Last: LastName,
       });
     } catch (error) {
-      alert("Error uploading user");
+      console.log("Error uploading user   " + error);
     }
   };
 
