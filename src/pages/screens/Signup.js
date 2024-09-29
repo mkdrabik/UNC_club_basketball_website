@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { auth, txtDB } from "../txtConfig";
-import { doc, setDoc } from "firebase/firestore";
+import { auth } from "../txtConfig";
 import { Link } from "react-router-dom";
 import {
   createUserWithEmailAndPassword,
@@ -51,15 +50,6 @@ function SignUp() {
         alert("User not created");
         return;
       }
-    }
-    try {
-      await setDoc(doc(txtDB, "users", firstName + " " + LastName), {
-        Email: auth.currentUser.email,
-        First: firstName,
-        Last: LastName,
-      });
-    } catch (error) {
-      console.log("Error uploading user   " + error);
     }
   };
 
