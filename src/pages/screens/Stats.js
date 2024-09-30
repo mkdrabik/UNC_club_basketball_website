@@ -183,7 +183,7 @@ function Stats() {
             <thead>
               <tr>
                 <th>Player</th>
-                <th>Points</th>
+                <th>PPG</th>
               </tr>
             </thead>
             <tbody>
