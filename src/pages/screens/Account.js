@@ -102,7 +102,7 @@ function Account() {
         <br />
         <br />
         <br />
-
+        <p className="warning">*Gmail is recommended.</p>
         <p className="warning">
           *Email is only used to ensure those wanting to view stats are not
           robots.
