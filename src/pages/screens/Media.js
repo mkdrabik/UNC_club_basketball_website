@@ -36,8 +36,6 @@ function Media() {
           alt="Logo"
           draggable="false"
         />
-
-        <script async src="//www.instagram.com/embed.js"></script>
       </div>
     </body>
   );
