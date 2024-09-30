@@ -103,7 +103,7 @@ function Account() {
         <br />
         <br />
 
-        <p>
+        <p className="warning">
           *Email is only used to ensure those wanting to view stats are not
           robots.
         </p>

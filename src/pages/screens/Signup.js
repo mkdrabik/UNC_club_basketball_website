@@ -116,7 +116,7 @@ function SignUp() {
         {user && (
           <span>
             <Link to="/stats">
-              <button className="acc-si">TO STATS</button>
+              <button className="acc-si">To Stats</button>
             </Link>
           </span>
         )}
@@ -152,11 +152,11 @@ function SignUp() {
           />
         )}
         <br />
-        <p>
+        <p className="warning">
           *Email is only used to ensure those wanting to view stats are not
           robots.
         </p>
-        <p>
+        <p className="warning">
           *Your name is used to log you back in if you log out. Please ensure
           there are no extra spaces and the first letter is capital. If you
           still cannot get in email drabikmason12@gmail.com.

@@ -21,6 +21,11 @@
   flex-direction: row;
 }
 
+.warning {
+  padding-left: 5px;
+  padding-right: 2px;
+}
+
 .img-track {
   display: flex;
 
@@ -102,4 +107,26 @@ iframe {
   -ms-animation: fadein 2s; /* Internet Explorer */
   -o-animation: fadein 2s; /* Opera < 12.1 */
   animation: fadein 2s;
+}
+
+@media (orientation: portrait) or (max-width: 1100px) {
+  .acc-si {
+    font-size: 30px;
+    background: rgb(72, 217, 94);
+    border: 1px solid rgb(236, 222, 222);
+    border-radius: 30px;
+    height: 100px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .acc-si {
+    font-size: 25px;
+    background: rgb(72, 217, 94);
+    border: 1px solid rgb(236, 222, 222);
+    border-radius: 30px;
+    height: 100px;
+    width: 200px;
+  }
 }
