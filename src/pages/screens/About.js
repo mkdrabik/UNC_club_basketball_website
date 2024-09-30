@@ -39,9 +39,9 @@ function About() {
           </div>
         </div>
         <div className="ab-vertical2">
-          <Link to="https://account.venmo.com/u/Tucker-Shank">
+          <Link to="https://verticalraise.com/fundraiser/unc-club-basketball-fundraiser-2024/">
             <img
-              src={require("../imgs/venmo.png")}
+              src={require("../imgs/donate.png")}
               className="logo2"
               alt="Logo"
               draggable="false"
