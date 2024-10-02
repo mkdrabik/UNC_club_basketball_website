@@ -2,7 +2,7 @@ import { InstagramEmbed } from "react-social-media-embed";
 
 import Header from "../../components/Header";
 
-import "../css/Account.css";
+import "../css/Media.css";
 
 function Media() {
   return (

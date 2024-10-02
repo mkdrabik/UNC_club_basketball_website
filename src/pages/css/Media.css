@@ -1,0 +1,43 @@
+.img-track {
+  display: flex;
+
+  gap: 8vmin;
+  overflow-y: auto;
+  scrollbar-width: 5px;
+  scroll-snap-align: initial;
+  margin: 10px;
+  scroll-snap-type: both mandatory;
+}
+
+.ab {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  color: rgb(118, 197, 250);
+  pointer-events: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.horizontal-img {
+  width: 600px;
+}
+
+.vertical-img {
+  width: 350px;
+}
+
+img {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+iframe {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
