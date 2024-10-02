@@ -6,6 +6,7 @@ import Stats from "./pages/screens/Stats";
 import Media from "./pages/screens/Media";
 import Account from "./pages/screens/Account";
 import SignUp from "./pages/screens/Signup";
+import Team_Stats from "./pages/screens/Team_Stats";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/media" element={<Media />} />
           <Route path="/account" element={<Account />} />
           <Route path="/su" element={<SignUp />} />
+          <Route path="/ts" element={<Team_Stats />} />
         </Routes>
       </BrowserRouter>
     </>
