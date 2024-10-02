@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { txtDB, auth } from "../txtConfig";
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 import Header from "../../components/Header";
 
@@ -28,6 +28,7 @@ function Team_Stats() {
       if (auth.currentUser != null) {
         const colRef = collection(txtDB, season);
         var q = null;
+        q = await query(colRef, where("Game", "!=", null));
       } else {
         alert("Provide Email to view stats");
       }
