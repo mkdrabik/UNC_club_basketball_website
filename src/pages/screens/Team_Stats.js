@@ -1,13 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { txtDB, auth } from "../txtConfig";
-import {
-  average,
-  collection,
-  getAggregateFromServer,
-  getDocs,
-  query,
-  where,
-} from "firebase/firestore";
+import { collection, getDocs, query } from "firebase/firestore";
 
 import Header from "../../components/Header";
 
@@ -20,24 +13,9 @@ function Team_Stats() {
     return JSON.parse(lv);
   });
 
-  //   const [avgs, setAVGs] = useState(() => {
-  //     const lv = localStorage.getItem("AVGS");
-  //     if (lv == null) return {};
-  //     return JSON.parse(lv);
-  //   });
-
-  //   const [player, setPlayer] = useState(() => {
-  //     const lv = localStorage.getItem("PLAYER");
-  //     if (lv == null) return "";
-  //     return JSON.parse(lv);
-  //   });
-
-  //   const [showSB, setSB] = useState(true);
   const [season, setSeason] = useState("");
 
   const se = useRef("");
-  //   const pla = useRef("");
-
   //every time games changes local storage is updated
   useEffect(() => {
     localStorage.setItem("GAMES", JSON.stringify(games));
@@ -81,11 +59,9 @@ function Team_Stats() {
           </select>
         </div>
         <div className="row-container">
-          {showSB && (
-            <button className="stats-btn" onClick={filled}>
-              Get Games
-            </button>
-          )}
+          <button className="stats-btn" onClick={filled}>
+            Get Games
+          </button>
 
           <button className="stats-btn" onClick={clear}>
             Clear Data
@@ -125,7 +101,6 @@ function Team_Stats() {
     console.log(season);
     var value = e.options[e.selectedIndex].value;
     setSeason(value);
-    setSB(true);
   }
 
   //   function handlePlayerChange() {
@@ -139,19 +114,17 @@ function Team_Stats() {
   //resets local storage and games array
   function clear() {
     setGames([]);
-    setAVGs({});
   }
 
   //clears the inputs
   function cf() {
     se.current.value = "";
-    pla.current.value = "";
     setSeason("");
   }
 
   //checks to make sure fields are filled out properly
   function filled() {
-    if (season === "" || player === "") {
+    if (season === "") {
       alert("Fill everything out");
     } else {
       qC();
