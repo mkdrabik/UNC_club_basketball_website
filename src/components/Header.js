@@ -19,7 +19,7 @@ function Header() {
           </li>
           <li>
             <span>
-              <Link to="/stat_form">Log Stats</Link>
+              <Link to="/ts">Games</Link>
             </span>
           </li>
 

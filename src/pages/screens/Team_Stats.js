@@ -6,7 +6,7 @@ import Header from "../../components/Header";
 
 import "../css/Team_Stats.css";
 
-function Team_Stats() {
+function TeamStats() {
   const [games, setGames] = useState(() => {
     const lv = localStorage.getItem("TEAM_GAMES");
     if (lv == null) return [];
@@ -14,6 +14,10 @@ function Team_Stats() {
   });
 
   const [season, setSeason] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("GAMES", JSON.stringify(games));
+  }, [games]);
 
   const se = useRef("");
   //every time games changes local storage is updated
@@ -29,6 +33,17 @@ function Team_Stats() {
         const colRef = collection(txtDB, season);
         var q = null;
         q = await query(colRef, where("Game", "!=", null));
+
+        const data = await getDocs(q);
+        data.forEach((g) => {
+          const game = {
+            outcome: g.data().Win,
+            os: g.data().Our_score,
+            ts: g.data().Opponent_score,
+            opponent: g.data().Opponent,
+          };
+          setGames((ga) => [...ga, game]);
+        });
       } else {
         alert("Provide Email to view stats");
       }
@@ -84,11 +99,16 @@ function Team_Stats() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Wake Forest</td>
-                <td>73 - 69</td>
-                <td>Win</td>
-              </tr>
+              {games.map((g) => (
+                <tr>
+                  <td>{g.opponent}</td>
+                  <td>
+                    {g.os} - {g.ts}
+                  </td>
+                  <td>{g.outcome}</td>
+                </tr>
+              ))}
+              <tr></tr>
             </tbody>
           </table>
         </div>
@@ -132,4 +152,4 @@ function Team_Stats() {
     }
   }
 }
-export default Team_Stats;
+export default TeamStats;

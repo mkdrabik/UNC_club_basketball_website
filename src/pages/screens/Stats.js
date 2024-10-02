@@ -4,7 +4,7 @@ import {
   average,
   collection,
   getAggregateFromServer,
-  getDocs,
+  // getDocs,
   query,
   where,
 } from "firebase/firestore";
@@ -71,7 +71,7 @@ function Stats() {
           alert("No games played");
           return;
         }
-        const data = await getDocs(q);
+        // const data = await getDocs(q);
         // data.forEach((g) => {
         //   const game = {
         //     points: g.data().Points,
