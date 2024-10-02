@@ -6,7 +6,6 @@ import Header from "../../components/Header";
 
 import "../css/Stat_Form.css";
 
-// TODO: Get roster and add option for every player
 function StatForm() {
   const [game, setGame] = useState({
     Date: "",
