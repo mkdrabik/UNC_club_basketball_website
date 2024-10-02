@@ -14,11 +14,11 @@ import Header from "../../components/Header";
 import "../css/Stats.css";
 
 function Stats() {
-  const [games, setGames] = useState(() => {
-    const lv = localStorage.getItem("GAMES");
-    if (lv == null) return [];
-    return JSON.parse(lv);
-  });
+  // const [games, setGames] = useState(() => {
+  //   const lv = localStorage.getItem("GAMES");
+  //   if (lv == null) return [];
+  //   return JSON.parse(lv);
+  // });
 
   const [avgs, setAVGs] = useState(() => {
     const lv = localStorage.getItem("AVGS");
@@ -39,9 +39,9 @@ function Stats() {
   const pla = useRef("");
 
   //every time games changes local storage is updated
-  useEffect(() => {
-    localStorage.setItem("GAMES", JSON.stringify(games));
-  }, [games]);
+  // useEffect(() => {
+  //   localStorage.setItem("GAMES", JSON.stringify(games));
+  // }, [games]);
 
   useEffect(() => {
     localStorage.setItem("PLAYER", JSON.stringify(player));
@@ -55,7 +55,7 @@ function Stats() {
   //gets games ordered based on filter choice;
   async function qC() {
     try {
-      setGames([]);
+      // setGames([]);
       setAVGs({});
       if (auth.currentUser != null) {
         const colRef = collection(txtDB, season);
@@ -72,18 +72,18 @@ function Stats() {
           return;
         }
         const data = await getDocs(q);
-        data.forEach((g) => {
-          const game = {
-            points: g.data().Points,
-          };
+        // data.forEach((g) => {
+        //   const game = {
+        //     points: g.data().Points,
+        //   };
 
-          setGames((ga) => [...ga, game]);
-          setAVGs({
-            points: Math.round(ss.data().ppg * 10) / 10,
-            player: player,
-          });
-          setSB(false);
+        // setGames((ga) => [...ga, game]);
+        setAVGs({
+          points: Math.round(ss.data().ppg * 10) / 10,
+          player: player,
         });
+        setSB(false);
+        // });
       } else {
         alert("Provide Email to view stats");
       }
@@ -217,7 +217,7 @@ function Stats() {
 
   //resets local storage and games array
   function clear() {
-    setGames([]);
+    // setGames([]);
     setAVGs({});
   }
 
