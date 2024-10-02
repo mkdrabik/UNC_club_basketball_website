@@ -71,7 +71,10 @@ function Stats() {
           alert("No games played");
           return;
         }
+
         // const data = await getDocs(q);
+        
+
         // data.forEach((g) => {
         //   const game = {
         //     points: g.data().Points,
