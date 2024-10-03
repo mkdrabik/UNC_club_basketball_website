@@ -8,6 +8,7 @@ import {
   query,
   where,
 } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 import Header from "../../components/Header";
 
@@ -73,7 +74,6 @@ function Stats() {
         }
 
         // const data = await getDocs(q);
-        
 
         // data.forEach((g) => {
         //   const game = {
@@ -166,18 +166,21 @@ function Stats() {
         </div>
         <div className="row-container">
           {showSB && (
-            <button className="stats-btn" onClick={filled}>
+            <button className="stats-btn2" onClick={filled}>
               Get Stats
             </button>
           )}
 
-          <button className="stats-btn" onClick={clear}>
+          <button className="stats-btn2" onClick={clear}>
             Clear Data
           </button>
 
-          <button className="stats-btn" onClick={cf}>
+          <button className="stats-btn2" onClick={cf}>
             Clear Form
           </button>
+          <Link to="/stat_form">
+            <button className="stats-btn3">Log Stats</button>
+          </Link>
         </div>
 
         <br></br>
