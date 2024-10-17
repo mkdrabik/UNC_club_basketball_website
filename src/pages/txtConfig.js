@@ -2,8 +2,6 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-import { config } from "./config.js";
-
 const firebaseConfig = {
   apiKey: "AIzaSyD1qdoePFiJXhjhLw4B5Yp0p0g4Oig5TSg",
   authDomain: "unc-club-basketball.firebaseapp.com",
