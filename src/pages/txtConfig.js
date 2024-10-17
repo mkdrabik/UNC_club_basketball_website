@@ -5,7 +5,7 @@ import { getAuth } from "firebase/auth";
 import { config } from "./config.js";
 
 const firebaseConfig = {
-  apiKey: config.MY_KEY,
+  apiKey: "AIzaSyD1qdoePFiJXhjhLw4B5Yp0p0g4Oig5TSg",
   authDomain: "unc-club-basketball.firebaseapp.com",
   projectId: "unc-club-basketball",
   storageBucket: "unc-club-basketball.appspot.com",
