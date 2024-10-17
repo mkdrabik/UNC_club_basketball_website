@@ -4,7 +4,6 @@ import { getAuth } from "firebase/auth";
 
 const api = process.env.REACT_APP_API_KEY;
 const firebaseConfig = {
-  // apiKey: "AIzaSyD1qdoePFiJXhjhLw4B5Yp0p0g4Oig5TSg",
   apiKey: api,
   authDomain: "unc-club-basketball.firebaseapp.com",
   projectId: "unc-club-basketball",
