@@ -109,6 +109,57 @@ function TeamStats() {
                 </tr>
               ))} */}
               <tr>
+                <td>Campbell</td>
+                <td>55-50</td>
+                <td className="td-loss">Loss</td>
+              </tr>
+              <tr>
+                <td>Campbell</td>
+                <td>78-44</td>
+                <td className="td-win">Win</td>
+              </tr>
+              <tr>
+                <td>Wake Forest</td>
+                <td>67-70</td>
+                <td className="td-loss">Loss</td>
+              </tr>
+              <tr>
+                <td>Wake Forest</td>
+                <td>66-62</td>
+                <td className="td-win">Win</td>
+              </tr>
+              <tr>
+                <td>High Point</td>
+                <td>83-80</td>
+                <td className="td-win">Win</td>
+              </tr>
+              <tr>
+                <td>High Point</td>
+                <td>92-91</td>
+                <td className="td-win">Win</td>
+              </tr>
+              <tr>
+                <td>UNCW</td>
+                <td>80-52</td>
+                <td className="td-win">Win</td>
+              </tr>
+              <tr>
+                <td>UNCW</td>
+                <td>65-50</td>
+                <td className="td-win">Win</td>
+              </tr>
+
+              <tr>
+                <td>Elon</td>
+                <td>68-35</td>
+                <td className="td-win">Win</td>
+              </tr>
+              <tr>
+                <td>Elon</td>
+                <td>72-46</td>
+                <td className="td-win">Win</td>
+              </tr>
+              <tr>
                 <td>Wake Forest</td>
                 <td>62-53</td>
                 <td className="td-win">Win</td>
@@ -141,8 +192,8 @@ function TeamStats() {
                 </tr>
               ))} */}
               <tr>
-                <td>64.5</td>
-                <td>62</td>
+                <td>71.3</td>
+                <td>58.9</td>
               </tr>
             </tbody>
           </table>
